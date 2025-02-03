@@ -49,12 +49,39 @@ pip install -r requirements.txt
 Ensure your dataset is in CSV format and follows the specified structure.
 
 ### Usage
-Send a POST request to /predict with the following JSON structure:
+### **Usage**  
 
-{
-    "task_name": "Task Name",
+#### **1. Run the Backend**  
+- Start the API server:  
+  ```sh
+  python app.py
+  ```  
+
+#### **2. Set Up the Frontend**  
+- Ensure these files are in the project:  
+  - `index.html` (UI)  
+  - `style.css` (Styling)  
+  - `script.js` (API calls)  
+- Open `index.html` in a browser.  
+
+#### **3. Use the Application**  
+- Enter **Task Name** (e.g., "Coding").  
+- Input **Duration (Hours)** (e.g., `10`).  
+- Provide **Error Rate (%)** (e.g., `5.0`).  
+- Click **"Predict Cost"** to view:  
+  - **Predicted Cost (USD)**  
+  - **Recommendations for optimization**  
+
+#### **4. API Usage (Alternative)**  
+- Send a POST request to `/predict`:  
+  {
+    "task_name": "Coding",
     "duration_hours": 10,
-    "error_rate": 2.0
-}
-
-The API will respond with the predicted cost and generated recommendations.
+    "error_rate": 5.0
+  }
+- API Response:  
+  {
+    "predicted_cost": 120.50,
+    "recommendations": "Reduce error rate to lower cost."
+  }
+  ```  
