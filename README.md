@@ -49,7 +49,6 @@ pip install -r requirements.txt
 Ensure your dataset is in CSV format and follows the specified structure.
 
 ### Usage
-### **Usage**  
 
 #### **1. Run the Backend**  
 - Start the API server:  
