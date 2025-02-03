@@ -53,9 +53,7 @@ Ensure your dataset is in CSV format and follows the specified structure.
 
 #### **1. Run the Backend**  
 - Start the API server:  
-  ```sh
   python app.py
-  ```  
 
 #### **2. Set Up the Frontend**  
 - Ensure these files are in the project:  
