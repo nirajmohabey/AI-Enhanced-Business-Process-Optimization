@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI-Enhanced Business Process Optimization</h1>
+        <form id="predictionForm">
+            <label for="task_name">Task Name:</label>
+            <input type="text" id="task_name" name="task_name" required placeholder="e.g., Coding">
+
+            <label for="duration_hours">Duration (Hours):</label>
+            <input type="number" id="duration_hours" name="duration_hours" required placeholder="e.g., 10">
+
+            <label for="error_rate">Error Rate (%):</label>
+            <input type="number" id="error_rate" name="error_rate" required placeholder="e.g., 5.0">
+
+            <button type="submit">Predict Cost</button>
+        </form>
+
+        <div id="result">
+            <h2>Prediction Result</h2>
+            <p><strong>Predicted Cost:</strong> <span id="predictedCost">-</span> USD</p>
+            <p><strong>Recommendations:</strong></p>
+            <ul id="recommendations">
+                <!-- Recommendations will be populated here -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
